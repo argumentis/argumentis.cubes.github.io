@@ -80,7 +80,7 @@
 			console.log( "столбцы =" + cols);
 			return cols;
 	}
-											// ФУНКЦИЯ УДАЛЕНИЯ КОЛОНОК
+										// ФУНКЦИЯ УДАЛЕНИЯ КОЛОНОК
 	function removeCols(parent) {
 		if(rows >= 1 && cols > 1) {
 			let trList  = table.querySelectorAll('tr');
@@ -88,11 +88,12 @@
 				trList[j].deleteCell(-1);
 			}
 			parent.appendChild(table);
-			if(Number.parseInt(removecols.style.left) > ( cols - 1) * 42) {
+			if(Number.parseInt(removecols.style.left) > ( cols - 1 ) * 42) {
 				removecols.style.left = Number.parseInt(removecols.style.left) - 42 + 'px';
 			}
 			cols --;
 			console.clear();
+			console.log(( cols - 1 ) * 42);
 			console.log( "строки =" + rows);
 			console.log( "столбцы =" + cols);
 			return cols;
@@ -123,7 +124,7 @@
 		} else {
 			return rows , cols;
 		}
-    }
+	    }
 
 
 window.onload = function() {
